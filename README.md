@@ -1,2 +1,4 @@
 # jquery
-Curso Jquery Alura
+Curso Jquery Alura - Alura Typer, jogo de marcar o tempo que vc escreve o texto e várias funcionalidades.
+
+
