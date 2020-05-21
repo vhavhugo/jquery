@@ -14,3 +14,14 @@ campo.on("input", function(){
     $("#contador-caracteres").text(qtdCaracteres);
     
 });
+var tempoRestantante = $("#tempo-digitacao").text();
+campo.one("focus", function(){
+    var cronometroID = setInterval(function(){
+        tempoRestantante--;
+        $("#tempo-digitacao").text(tempoRestantante);
+        if(tempoRestantante < 1){
+            campo.attr("disabled", true);
+            clearInterval(cronometroID);
+        }
+    },1000);
+});
