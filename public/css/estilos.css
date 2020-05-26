@@ -23,3 +23,12 @@
 .borda-vermelha{
     border: 3px solid red;
 }
+
+.placar{
+    /* display: none; */
+}
+
+/*para de sumir a barra de rolagem */
+body{
+    overflow: scroll;
+}
