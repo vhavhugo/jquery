@@ -39,10 +39,14 @@ function novaLinha(usuario, palavaras){
 
 function removeLinha(){
     event.preventDefault();
-    $(this).parent().parent().remove();
+    var linha = $(this).parent().parent();
+    linha.fadeOut(1000);
+    setTimeout(function(){
+        linha.remove();
+    },1000);
 }
 
 function mostraPlacar(){
     // $(".placar").css("display", "block");
-    $(".placar").slideToggle(600);
+    $(".placar").stop().slideToggle(600);
 }
