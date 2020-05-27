@@ -9,4 +9,6 @@ function trocaFraseAleatoria(data){
     //Math.floor = arredonda pra baixo.
     var numeroAleario = Math.floor(Math.random() * data.length);
     frase.text(data[numeroAleario].texto);
+    atualizaTamnhoFrase();
+    atualizaTempoInicial(data[numeroAleario].tempo);
 }
