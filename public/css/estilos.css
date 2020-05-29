@@ -49,3 +49,12 @@ body{
 #botao-sync{
     float: right;
 }
+
+.select-usuarios{
+    display: block;
+}
+
+#usuarios{
+    display: inline-block;
+    width: 20%;
+}
