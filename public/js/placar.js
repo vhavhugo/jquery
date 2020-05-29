@@ -9,8 +9,7 @@ function inserePlacar() {
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);
 
-    corpoTabela.append(linha);
-
+    corpoTabela.prepend(linha);
     $(".placar").slideDown(500);
     scrollPlacar();
 }
@@ -47,7 +46,6 @@ function novaLinha(usuario, palavaras){
 function removeLinha() {
     event.preventDefault();
     var linha = $(this).parent().parent();
-
     linha.fadeOut(1000);
     setTimeout(function() {
         linha.remove();
@@ -88,6 +86,7 @@ function atualizaPlacar(){
     $.get("http://localhost:3000/placar", function(data){
         $(data).each(function(){
             var linha = novaLinha(this.usuario, this.pontos);
+            linha.find(".botao-remover").click(removeLinha);
             $("tbody").append(linha);
         });
     });
