@@ -51,10 +51,15 @@ body{
 }
 
 .select-usuarios{
-    display: block;
+    display: inline-block;
+}
+
+.selectize-input{
+    width: 150px;
+    vertical-align: middle;
 }
 
 #usuarios{
-    display: inline-block;
-    width: 20%;
+    display: block;
+    
 }
